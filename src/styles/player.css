@@ -3,7 +3,7 @@
    width: 100%;
    padding: 2.5%;
    background-size: cover;
-   backdrop-filter: blur(var(--blurring));
+   backdrop-filter: blur(var(--blurring)) brightness(50%);
    color: white;
 
    & section {
