@@ -46,21 +46,21 @@ h3 {
    height: 20%;
    width: 100%;
    display: flex;
+   justify-content: space-between;
 
    & div:nth-child(1) {
       height: 100%;
-      width: 85%;
    }
 
    & div:nth-child(2) {
       height: 100%;
-      width: 15%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
 
       & span {
          font-size: 2rem;
+
+         &:hover {
+            cursor: pointer;
+         }
       }
    }
 }
