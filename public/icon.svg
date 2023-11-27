@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="3.0722222"
+     inkscape:cx="84.954792"
+     inkscape:cy="94.719711"
+     inkscape:window-width="1536"
+     inkscape:window-height="864"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs1">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="-73.237192 : 81.537071 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="172.63233 : 81.537071 : 1"
+       inkscape:persp3d-origin="49.697569 : 51.537071 : 1"
+       id="perspective15" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect15"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,18.867925 C 0,8.4528302 8.4528302,0 18.867925,0 c 10.415094,0 18.867924,8.4528302 18.867924,18.867925 0,10.415094 -8.45283,18.867924 -18.867924,18.867924 C 8.4528302,37.735849 0,29.283019 0,18.867925 Z"
+       copytype="single_stretched"
+       prop_scale="5"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect12"
+       is_visible="true"
+       lpeversion="1.3"
+       scale_width="1"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       end_linecap_type="zerowidth"
+       offset_points="0,100"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       not_jump="false"
+       sort_points="true"
+       message="&lt;b&gt;Strg + Klick&lt;/b&gt; und Verschieben eines Anfassers" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect11"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="bsplinespiro"
+       autoreverse="false"
+       close="false"
+       join="false"
+       linkedpaths="#path11,0,1"
+       id="path-effect13" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="opacity:0.5;fill:#ffc400;fill-opacity:1;stroke:none;stroke-width:1.002;stroke-opacity:0.9967;stroke-dasharray:none"
+       id="path13"
+       cx="90"
+       cy="90"
+       inkscape:label="circle"
+       r="85" />
+    <circle
+       style="opacity:0.5;fill:#ff8000;fill-opacity:1;stroke:none;stroke-width:1.002;stroke-dasharray:none;stroke-opacity:0.9967"
+       id="path20"
+       cx="90.000008"
+       cy="90.000008"
+       r="75" />
+    <circle
+       style="opacity:0.5;fill:#ff4000;fill-opacity:1;stroke:none;stroke-width:1.002;stroke-dasharray:none;stroke-opacity:0.9967"
+       id="path20-5"
+       cx="90.000008"
+       cy="90.000008"
+       r="65" />
+    <circle
+       style="opacity:0.5;fill:#ff0100;fill-opacity:1;stroke:none;stroke-width:1.002;stroke-dasharray:none;stroke-opacity:0.9967"
+       id="path20-5-6"
+       cx="90.000008"
+       cy="90.000008"
+       r="55" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:133.333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.002;stroke-dasharray:none;stroke-opacity:0.9967"
+       x="34.563953"
+       y="137.72124"
+       id="text24"
+       inkscape:transform-center-x="-0.9764919"
+       inkscape:transform-center-y="-0.97649184"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         x="34.563953"
+         y="137.72124">M</tspan><tspan
+         sodipodi:role="line"
+         id="tspan26"
+         x="34.563953"
+         y="304.38748"></tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,123 @@
+.songs {
+   height: 100%;
+   position: absolute;
+   width: 100%;
+}
+
+.song-in-songs {
+   margin: 1dvh 0;
+   height: 10dvh;
+   width: 100%;
+   background-color: var(--default-bg);
+   border-radius: var(--border-radius);
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+   & img {
+      height: 90%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--border-radius);
+   }
+}
+
+.song-main {
+   width: 90%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.song-title-and-artist {
+   height: 100%;
+   width: 70%;
+   padding: 0 2.5%;
+
+   & h1,
+   h4 {
+      height: 50%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-content: flex-start;
+   }
+
+   & h4 {
+      color: lightgray;
+   }
+}
+
+.song-edit {
+   width: 30%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.song-length,
+.song-isFavorite {
+   height: 50%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.5rem;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+.songs-searchbar {
+   height: 8%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 10;
+   box-shadow: 0px 0px 25px 10px black;
+
+   & span {
+      height: 100%;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+   }
+
+   & input {
+      height: 100%;
+      width: 80%;
+      outline: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+   }
+}
+
+.songs-listed {
+   height: 92%;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+   width: 0;
+}  

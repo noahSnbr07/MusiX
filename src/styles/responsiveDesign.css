@@ -1,0 +1,64 @@
+/*DESKTOP SELECTOR*/
+@media only screen and (min-width: 768px) {
+   .toolBox {
+      flex-direction: row;
+   }
+
+   .song-main {
+      width: 92%;
+   }
+
+   .song-length {
+      justify-content: flex-end;
+   }
+
+   .toolBox span {
+      height: 100dvh;
+      width: 255dvw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.15);
+         cursor: pointer;
+         font-size: 8rem;
+      }
+
+      &:active {
+         scale: 0.85;
+      }
+   }
+
+   .fullSizeCover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100dvh;
+      width: 100dvw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dimming);
+      backdrop-filter: blur(var(--blurring));
+      z-index: 10;
+
+      & img {
+         z-index: 100;
+         height: 50%;
+         aspect-ratio: 1 / 1;
+         border-radius: var(--border-radius);
+      }
+   }
+}
+
+/*PHONE SELECTOR*/
+@media only screen and (max-width: 600px) {
+   .song-length {
+      justify-content: center;
+   }
+
+   .song-main {
+      width: 80%;
+   }
+}

@@ -1,0 +1,530 @@
+[
+   {
+      "id": 0,
+      "title": "Volt",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273646a3ff29b70c65ace36a778",
+      "length": "3:18",
+      "audio": "volt.mp3"
+   },
+   {
+      "id": 1,
+      "title": "Voll Druff",
+      "artist": "D-Fence",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025305f574cc9a56d0a6139f8c",
+      "length": "2:47",
+      "audio": "druff.mp3"
+   },
+   {
+      "id": 2,
+      "title": "Ex oder Wessi",
+      "artist": "TekkSchuster",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2734e5d493cf474cb84818b2632",
+      "length": "2:29",
+      "audio": "exoderwessi.mp3"
+   },
+   {
+      "id": 3,
+      "title": "Save That Shit",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0222278aa84691381f3015d534",
+      "length": "3:52",
+      "audio": "savethatshit.mp3"
+   },
+   {
+      "id": 4,
+      "title": "Benzin",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02a715d32590424cd667879ba3",
+      "length": "3:53",
+      "audio": "benzin.mp3"
+   },
+   {
+      "id": 5,
+      "title": "Reise, Reise",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02cbe7573e1175f842e24b34c2",
+      "length": "4:11",
+      "audio": "reisereise.mp3"
+   },
+   {
+      "id": 6,
+      "title": "WHATWHAT",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c5dfa1604a67609b5145792e",
+      "length": "3:40",
+      "audio": "whatwhat.mp3"
+   },
+   {
+      "id": 7,
+      "title": "Xaeros Box",
+      "artist": "Trepassed",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0212d1bb9ab656c72522fa0369",
+      "length": "3:12",
+      "audio": "xaerosbox.mp3"
+   },
+   {
+      "id": 8,
+      "title": "Wo ist das Acid?",
+      "artist": "Tic Tekk Toe",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026e163e43f0ec5ae5d226f4c7",
+      "length": "0:56",
+      "audio": "woistdasacid.mp3"
+   },
+   {
+      "id": 9,
+      "title": "ACID BALADE",
+      "artist": "Raik",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02051cf27e0a06c61f6cb9822d",
+      "length": "5:02",
+      "audio": "acidbalade.mp3"
+   },
+   {
+      "id": 10,
+      "title": "Kirche",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e027634ec8f0599c66e26ef0456",
+      "length": "5:37",
+      "audio": "kirche.mp3"
+   },
+   {
+      "id": 11,
+      "title": "Wir Ham' noch lange nicht genug",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029458e719b3bafcfe324e2768",
+      "length": "4:52",
+      "audio": "wirhamnochlangenichtgenung.mp3"
+   },
+   {
+      "id": 12,
+      "title": "Come Take My Hand",
+      "artist": "2 Brothers on the 4th Floor",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026681b7dcb409bf187b5a889d",
+      "length": "4:23",
+      "audio": "cometakemyhand.mp3"
+   },
+   {
+      "id": 13,
+      "title": "Frequencies",
+      "artist": "DJ Fuzz Buzz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02cfc3e275b3f8ba57a498796d",
+      "length": "7:07",
+      "audio": "frequencies.mp3"
+   },
+   {
+      "id": 14,
+      "title": "Deutschland",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02d3bf489c4d50a40fbe8f77e7",
+      "length": "5:23",
+      "audio": "deutschland.mp3"
+   },
+   {
+      "id": 15,
+      "title": "Adieu",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021108fef87966d83948b6a037",
+      "length": "5:35",
+      "audio": "adieu.mp3"
+   },
+   {
+      "id": 16,
+      "title": "Zeit",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028d7106310a026583649d1cc9",
+      "length": "6:15",
+      "audio": "zeit.mp3"
+   },
+   {
+      "id": 17,
+      "title": "Zick Zack",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02d6e04629d6b5a6de13c5c5e8",
+      "length": "4:04",
+      "audio": "zickzack.mp3"
+   },
+   {
+      "id": 18,
+      "title": "Ich will",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028b2c42026277efc3e058855b",
+      "length": "4:05",
+      "audio": "ichwill.mp3"
+   },
+   {
+      "id": 19,
+      "title": "Mein Land",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0219e289286920bf38b0b05a78",
+      "length": "4:26",
+      "audio": "meinland.mp3"
+   },
+   {
+      "id": 20,
+      "title": "Outside World",
+      "artist": "Sunbeam",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02ab9eb009db6cf9804a138f14",
+      "length": "5:30",
+      "audio": "outsideworld.mp3"
+   },
+   {
+      "id": 21,
+      "title": "Welcome Too Hell",
+      "artist": "Pandemonium",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029daa73c1620d6a0dc50c787d",
+      "length": "6:21",
+      "audio": "welcometoohell.mp3"
+   },
+   {
+      "id": 22,
+      "title": "Deutschland im Herbst",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c4939b5516bd0042796d6543",
+      "length": "4:32",
+      "audio": "deutschlandimherbst.mp3"
+   },
+   {
+      "id": 23,
+      "title": "Trepidation",
+      "artist": "Stan Christ",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b232f51e71aa84a6a40d54c8",
+      "length": "4:21",
+      "audio": "trepidation.mp3"
+   },
+   {
+      "id": 24,
+      "title": "Sacré Bob l'Éponge",
+      "artist": "NeoFX",
+      "cover": "https://i.scdn.co/image/ab67616d00001e022d360725a6e49731301a3026",
+      "length": "3:25",
+      "audio": "sacreboblesponge.mp3"
+   },
+   {
+      "id": 25,
+      "title": "Intoxiated",
+      "artist": "Doruksen",
+      "cover": "https://i.scdn.co/image/ab67616d00001e023fb4209e9acd71829b57ef7b",
+      "length": "5:09",
+      "audio": "intoxiated.mp3"
+   },
+   {
+      "id": 26,
+      "title": "Sex With Medusa",
+      "artist": "Ephy Pinkman",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02959d60e232f99484b4419d57",
+      "length": "7:34",
+      "audio": "sexwithmedusa.mp3"
+   },
+   {
+      "id": 27,
+      "title": "Griechischer Wein",
+      "artist": "Udo Jürgens",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0299de0dd5cb7f22601906a758",
+      "length": "4:04",
+      "audio": "griechischerwein.mp3"
+   },
+   {
+      "id": 28,
+      "title": "Es kracht in Buxtehude",
+      "artist": "Tritzo",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c93e6c669bcb6538d8cb8ca2",
+      "length": "2:41",
+      "audio": "eskrachtinbuxtehude.mp3"
+   },
+   {
+      "id": 29,
+      "title": "Golden SZN",
+      "artist": "OGUZ",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0263809e940ee91df00227d7ed",
+      "length": "5:55",
+      "audio": "goldenszn.mp3"
+   },
+   {
+      "id": 30,
+      "title": "Meet Her At The Love Parade",
+      "artist": "Vieze Asbak",
+      "cover": "https://i.scdn.co/image/ab67616d00001e023846afc03c8eaa5e05d15319",
+      "length": "3:12",
+      "audio": "meetherattheloveparade.mp3"
+   },
+   {
+      "id": 31,
+      "title": "Panzerband & billiges Crack",
+      "artist": "Vieze Asbak",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0278c2055656c2a548d17d1a44",
+      "length": "5:00",
+      "audio": "panzerbandundbilligescrack.mp3"
+   },
+   {
+      "id": 32,
+      "title": "Hot Razor",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b711a717d00f05f3e726f65a",
+      "length": "3:24",
+      "audio": "hotrazor.mp3"
+   },
+   {
+      "id": 33,
+      "title": "Acid Plaat",
+      "artist": "D A R K",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0254d6132ad06b0da43bc5b8c1",
+      "length": "3:33",
+      "audio": "acidplaat.mp3"
+   },
+   {
+      "id": 34,
+      "title": "Shake",
+      "artist": "IShowSpeed",
+      "cover": "https://i.scdn.co/image/ab67706c0000da84046e0d19f50518a5ec0ed4d9",
+      "length": "4:03",
+      "audio": "shake.mp3"
+   },
+   {
+      "id": 35,
+      "title": "Never Alone",
+      "artist": "2 Brothers on the 4th Floor",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b5329d44a0e3fe4e4de65b94",
+      "length": "4:11",
+      "audio": "neveralone.mp3"
+   },
+   {
+      "id": 36,
+      "title": "Schei-wi-dei-wi-du",
+      "artist": "Hardstyle Buamz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02189454b893ad589210da9770",
+      "length": "3:02",
+      "audio": "scheiwideiwidu.mp3"
+   },
+   {
+      "id": 37,
+      "title": "Mr Lonely",
+      "artist": "CheapeX",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273989710123e1bbd92701c916e",
+      "length": "4:33",
+      "audio": "mrlonely.mp3"
+   },
+   {
+      "id": 38,
+      "title": "Bad Dreams",
+      "artist": "DJ Issac",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02f6c553ccaad60cb89c0b3a97",
+      "length": "4:05",
+      "audio": "baddreams.mp3"
+   },
+   {
+      "id": 39,
+      "title": "Habicht",
+      "artist": "DORFTEKK",
+      "cover": "https://i.scdn.co/image/ab67616d00001e022ba54f9e8d218408d774ec1c",
+      "length": "2:32",
+      "audio": "habicht.mp3"
+   },
+   {
+      "id": 40,
+      "title": "Miami Ultras",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0261064b032571008734f8810c",
+      "length": "4:23",
+      "audio": "miamiultras.mp3"
+   },
+   {
+      "id": 41,
+      "title": "Benz Truck",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0222278aa84691381f3015d534",
+      "length": "3:04",
+      "audio": "benztruck.mp3"
+   },
+   {
+      "id": 42,
+      "title": "Antarctica",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02fed01cae4350805103c24cc7",
+      "length": "2:07",
+      "audio": "antarctica.mp3"
+   },
+   {
+      "id": 43,
+      "title": "NOT EVEN GHOSTS ARE THIS EMPTY",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029ae2d5f3220065aaf33ad145",
+      "length": "2:39",
+      "audio": "notevenghostsarethisempty.mp3"
+   },
+   {
+      "id": 44,
+      "title": "Miss You",
+      "artist": "southstar",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021b5f2557a7fe884d0e3d8b2a",
+      "length": "3:24",
+      "audio": "missyou.mp3"
+   },
+   {
+      "id": 45,
+      "title": "The Number You Have Dialed Is Not In Service",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b25093d7ccdce4a848988f9e",
+      "length": "2:45",
+      "audio": "thenumberyouhavedialedisnotinservice.mp3"
+   },
+   {
+      "id": 46,
+      "title": "Hellboy",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02853588a3fc815ab6c6464475",
+      "length": "3:06",
+      "audio": "hellboy.mp3"
+   },
+   {
+      "id": 47,
+      "title": "Lovely",
+      "artist": "Yung Goth",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0243e9fa07c74201cca4bb0fbc",
+      "length": "2:08",
+      "audio": "lovely.mp3"
+   },
+   {
+      "id": 48,
+      "title": "Void",
+      "artist": "Pouya",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02bbe040b59fea12d45d6b5148",
+      "length": "4:47",
+      "audio": "void.mp3"
+   },
+   {
+      "id": 49,
+      "title": "Witchblades",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029fd952223df9ce654688138f",
+      "length": "2:42",
+      "audio": "witchblades.mp3"
+   },
+   {
+      "id": 50,
+      "title": "And To Those I Love, Thanks For Sticking Around",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2bab14ce82f78a4160376a1",
+      "length": "2:48",
+      "audio": "andtothoseilovethanksforstickingaround.mp3"
+   },
+   {
+      "id": 51,
+      "title": "That Just Isn't Empirically Possible",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2bab14ce82f78a4160376a1",
+      "length": "2:03",
+      "audio": "thatjustisntempiricallypossible.mp3"
+   },
+   {
+      "id": 52,
+      "title": "Putrid Pride",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02e2bab14ce82f78a4160376a1",
+      "length": "1:47",
+      "audio": "putridpride.mp3"
+   },
+   {
+      "id": 53,
+      "title": "Mount Sinai",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029170408b39b66a6185f6534a",
+      "length": "2:25",
+      "audio": "mountsinai.mp3"
+   },
+   {
+      "id": 54,
+      "title": "Nichts ist für die Ewigkeit",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024a345bda1bd2b6f13b112c64",
+      "length": "5:33",
+      "audio": "nichtsistfürdieewigkeit.mp3"
+   },
+   {
+      "id": 55,
+      "title": "5 'N the Mornin'",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e022889122750969ea1da920379",
+      "length": "4:25",
+      "audio": "fiveinthemornin.mp3"
+   },
+   {
+      "id": 56,
+      "title": "1000 Blunts",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02db20089661aff3a8070600ca",
+      "length": "2:55",
+      "audio": "thousandblunts.mp3"
+   },
+   {
+      "id": 57,
+      "title": "Matte Black",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02db20089661aff3a8070600ca",
+      "length": "3:58",
+      "audio": "matteblack.mp3"
+   },
+   {
+      "id": 58,
+      "title": "For the Last Time",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02f795a2962820664b4112901e",
+      "length": "2:31",
+      "audio": "forthelasttime.mp3"
+   },
+   {
+      "id": 59,
+      "title": "Realism vs Idealism",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b711a717d00f05f3e726f65a",
+      "length": "2:38",
+      "audio": "realismvsidealism.mp3"
+   },
+   {
+      "id": 60,
+      "title": "Whole Lotta Gray",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02be478d1d2feca9f2a2b31a3b",
+      "length": "3:06",
+      "audio": "wholelottagrey.mp3"
+   },
+   {
+      "id": 60,
+      "title": "16 Lines",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0255e36b0dc5b0ef008fc85319",
+      "length": "3:57",
+      "audio": "sixteenlines.mp3"
+   },
+   {
+      "id": 61,
+      "title": "We Are The People",
+      "artist": "Southstar",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02fffbc6bb8f405c2dacf8d64b",
+      "length": "3:56",
+      "audio": "wearethepeople.mp3"
+   },
+   {
+      "id": 62,
+      "title": "Say No",
+      "artist": "StrezzKidz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e023eeee46e2e200e7df7425e43",
+      "length": "2:23",
+      "audio": "sayno.mp3"
+   },
+   {
+      "id": 63,
+      "title": "The Only Thing They Fear Is You",
+      "artist": "The Last Bear Ender",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021ccecd0493c3cb25b703e50d",
+      "length": "4:57",
+      "audio": "theonlythingtheyfearisyou.mp3"
+   },
+   {
+      "id": 63,
+      "title": "Diemonds",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029170408b39b66a6185f6534a",
+      "length": "3:12",
+      "audio": "diemonds.mp3"
+   }
+]

@@ -1,0 +1,22 @@
+.toolBox {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: 100;
+   background-color: var(--dimming);
+   backdrop-filter: blur(var(--blurring));
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+
+   & span {
+      font-size: 5rem;
+   }
+
+   & span:nth-last-child(1) {
+      color: rgb(255, 50, 50);
+   }
+}
