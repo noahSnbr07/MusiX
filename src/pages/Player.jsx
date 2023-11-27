@@ -27,6 +27,7 @@ export default function Player() {
    const [isCoverOpen, setCoverOpen] = useState(false);
    const [isVolumeTrigger, setVolumeTriggerOpen] = useState(false);
    const [isToolBoxOpen, setIsToolBoxOpen] = useState(false);
+   const [copiedInfo, setCopiedInfo] = useState(false);
 
    function secondsToMinutes(seconds) {
       return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
@@ -115,6 +116,17 @@ export default function Player() {
       }
    }
 
+   function copyCurrentSong() {
+      navigator.clipboard.writeText(JSON.stringify(currentSong))
+         .then(() => {
+         })
+         .catch((error) => {
+            console.error('Error copying song object to clipboard', error);
+         });
+      setCopiedInfo(true);
+      setTimeout(() => { setCopiedInfo(false); }, 1000);
+   }
+
    // Handle volume change
    const handleVolumeChange = (e) => {
       const newVolume = parseFloat(e.target.value);
@@ -181,6 +193,7 @@ export default function Player() {
    const ToolBox = () => {
       return (
          <div className='toolBox' >
+            <Icon onClick={copyCurrentSong} icon={copiedInfo ? 'done' : 'data_object'} />
             <Icon onClick={toggleRepeat} icon={isRepeating ? 'repeat' : 'start'} />
             <Icon onClick={toggleShuffleMode} icon={isShuffle ? 'shuffle_on' : 'shuffle'} />
             <Icon onClick={() => { toggleVolumeTrigger(); toggleToolBox(); }} icon='volume_up' />
