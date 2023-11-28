@@ -61,7 +61,7 @@ export default function Player() {
       audioRef.current.currentTime = currentTime;
       isPlaying.current ? audioRef.current.play()
          .then(() => { }).catch((error) => console.error(error)) : audioRef.current.pause();
-   }, [isPlaying.current, currentTime]);
+   }, [currentTime]);
 
    // Play/pause function
    const togglePlayer = () => {
@@ -117,14 +117,21 @@ export default function Player() {
    }
 
    function copyCurrentSong() {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) {
+         console.error('Clipboard API not supported on this device.');
+         alert('your browser does not support the MWD Clipboard Api functions');
+         return;
+      }
+
       navigator.clipboard.writeText(JSON.stringify(currentSong))
          .then(() => {
+            console.log('Song object copied to clipboard');
+            setCopiedInfo(true);
+            setTimeout(() => { setCopiedInfo(false); }, 1000);
          })
          .catch((error) => {
             console.error('Error copying song object to clipboard', error);
          });
-      setCopiedInfo(true);
-      setTimeout(() => { setCopiedInfo(false); }, 1000);
    }
 
    // Handle volume change
@@ -193,12 +200,24 @@ export default function Player() {
    const ToolBox = () => {
       return (
          <div className='toolBox' >
-            <Icon onClick={copyCurrentSong} icon={copiedInfo ? 'done' : 'data_object'} />
-            <Icon onClick={toggleRepeat} icon={isRepeating ? 'repeat' : 'start'} />
-            <Icon onClick={toggleShuffleMode} icon={isShuffle ? 'shuffle_on' : 'shuffle'} />
-            <Icon onClick={() => { toggleVolumeTrigger(); toggleToolBox(); }} icon='volume_up' />
-            <Icon onClick={toggleFullScreen} icon={isFullscreen ? 'fullscreen_exit' : 'fullscreen'} />
-            <Icon onClick={toggleToolBox} icon={'close'} />
+            <button>
+               <Icon onClick={copyCurrentSong} icon={copiedInfo ? 'done' : 'data_object'} />
+            </button>
+            <button>
+               <Icon onClick={toggleRepeat} icon={isRepeating ? 'repeat' : 'start'} />
+            </button>
+            <button>
+               <Icon onClick={toggleShuffleMode} icon={isShuffle ? 'shuffle_on' : 'shuffle'} />
+            </button>
+            <button>
+               <Icon onClick={() => { toggleVolumeTrigger(); toggleToolBox(); }} icon='volume_up' />
+            </button>
+            <button>
+               <Icon onClick={toggleFullScreen} icon={isFullscreen ? 'fullscreen_exit' : 'fullscreen'} />
+            </button>
+            <button>
+               <Icon onClick={toggleToolBox} icon={'close'} />
+            </button>
          </div>
       );
    }
@@ -215,6 +234,40 @@ export default function Player() {
       }
    }
 
+   useEffect(() => {
+      // Check if the browser supports the Media Session API
+      if ('mediaSession' in navigator) {
+         navigator.mediaSession.metadata = new MediaMetadata({
+            title: currentSong.title,
+            artist: currentSong.artist,
+            artwork: [
+               { src: currentSong.cover, sizes: '301x301', type: 'image/png, image/jpeg' },
+            ],
+         });
+         navigator.mediaSession.setActionHandler('play', () => { togglePlayer(); });
+         navigator.mediaSession.setActionHandler('pause', () => { togglePlayer(); });
+         navigator.mediaSession.setActionHandler('previoustrack', () => { changeSongManually(currentSongIndex - 1); });
+         navigator.mediaSession.setActionHandler('nexttrack', () => { changeSongManually(currentSongIndex + 1); });
+      }
+   }, [currentSong]);
+
+   const showNotification = () => {
+      if ('Notification' in window) {
+         Notification.requestPermission().then(permission => {
+            if (permission === 'granted') {
+               const notification = new Notification('Now Playing', {
+                  body: `${currentSong.artist} - ${currentSong.title}`,
+                  icon: `${currentSong.cover}`,
+               });
+            }
+         });
+      }
+   };
+
+   useEffect(() => {
+      showNotification();
+      setCurrentSongIndex(currentSongIndex);
+   }, [currentSong]);
    return (
       <React.Fragment>
          {isCoverOpen ? <FullSizeCover /> : isVolumeTrigger ? <VolumeTrigger /> : isToolBoxOpen && <ToolBox />}
@@ -255,9 +308,15 @@ export default function Player() {
                      </div>
                   </div>
                   <div className='controlLayout'>
-                     <Icon icon='first_page' onClick={() => changeSongManually(currentSongIndex - 1)} />
-                     <Icon onClick={togglePlayer} icon={isPlaying.current ? 'pause' : 'play_arrow'} />
-                     <Icon icon='last_page' onClick={() => changeSongManually(currentSongIndex + 1)} />
+                     <button>
+                        <Icon icon='first_page' onClick={() => changeSongManually(currentSongIndex - 1)} />
+                     </button>
+                     <button>
+                        <Icon onClick={togglePlayer} icon={isPlaying.current ? 'pause' : 'play_arrow'} />
+                     </button>
+                     <button>
+                        <Icon icon='last_page' onClick={() => changeSongManually(currentSongIndex + 1)} />
+                     </button>
                   </div>
                </section>
             </div>

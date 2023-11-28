@@ -534,5 +534,21 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e02cdf5677181cd89bbe473c25a",
       "length": "2:32",
       "audio": "technoistunserewelt.mp3"
+   },
+   {
+      "id": 65,
+      "title": "Schwanzus Longus",
+      "artist": "Das Leben Des Brian",
+      "cover": "https://i.scdn.co/image/ab67706c0000da84a3922ab4b3fa3fcd777c4df6",
+      "length": "2:40",
+      "audio": "schwanzuslongus.mp3"
+   },
+   {
+      "id": 66,
+      "title": "Bring It Live",
+      "artist": "Didi Early Rave",
+      "cover": "https://i.scdn.co/image/ab67616d00001e022f0c72cd7a4d0a89def38ce7",
+      "length": "4:26",
+      "audio": "bringitlive.mp3"
    }
 ]

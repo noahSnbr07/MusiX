@@ -79,23 +79,28 @@ h3 {
    justify-content: space-between;
    align-items: center;
 
-   & span {
-      font-size: 3rem;
+   & button {
+      background-color: transparent;
+      height: 45%;
+      border-radius: 999px;
+      aspect-ratio: 1 / 1;
+      border: none;
+      color: inherit;
 
-      &:hover {
-         cursor: pointer;
-      }
-
-      &:active {
-         scale: 0.8;
+      & span {
+         height: 100%;
+         width: 100%;
+         font-size: 3rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
    }
 
-   & span:nth-child(2) {
+   & button:nth-child(2) {
       font-size: 3rem;
       background: rgba(255, 255, 255, 0.25);
       border-radius: 999px;
-      padding: 20px;
    }
 }
 

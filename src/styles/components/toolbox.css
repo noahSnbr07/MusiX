@@ -3,7 +3,7 @@
    top: 0;
    left: 0;
    height: 100%;
-   width: 100%;
+   width: 100dvw;
    z-index: 100;
    background-color: var(--dimming);
    backdrop-filter: blur(var(--blurring));
@@ -12,11 +12,20 @@
    justify-content: space-evenly;
    align-items: center;
 
-   & span {
-      font-size: 5rem;
-   }
+   & button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      height: 100%;
+      width: 100%;
 
-   & span:nth-last-child(1) {
-      color: rgb(255, 50, 50);
+      & span {
+         height: 100%;
+         width: 100%;
+         font-size: 5rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
    }
 }
