@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/player.css';
 import Icon from '../config/components/Icon.jsx';
 import songLibrary from '../libs/Library.json';
@@ -99,21 +99,21 @@ export default function Player() {
       audioRef.current.volume = newValue;
    };
 
-   const playRandomSong = () => {
+   const playRandomSong = useCallback(() => {
       setCurrentSongIndex(Math.floor(Math.random() * songLibrary.length));
       setCurrentTime(0);
-   }
+   }, []);
 
    // Change the song
-   function changeSongManually(index) {
+   const changeSongManually = useCallback((index) => {
       if (index >= 0 && index < songLibrary.length) {
-         if (isShuffle) { playRandomSong(); }
+         if (isShuffle) { playRandomSong() }
          else if (isRepeating) { setCurrentTime(0); }
          else {
             setCurrentSongIndex(index);
          }
       }
-   }
+   }, [playRandomSong, isRepeating, isShuffle]);
 
    function copyCurrentSong() {
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
@@ -178,7 +178,7 @@ export default function Player() {
             setCurrentTime(0);
          }
       }
-   }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle]);
+   }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle, playRandomSong]);
 
    // Volume Trigger component
    const VolumeTrigger = () => (
@@ -250,9 +250,9 @@ export default function Player() {
          navigator.mediaSession.setActionHandler('previoustrack', () => { changeSongManually(currentSongIndex - 1); });
          navigator.mediaSession.setActionHandler('nexttrack', () => { changeSongManually(currentSongIndex + 1); });
       }
-   }, [currentSong]);
+   }, [currentSong, changeSongManually, currentSongIndex]);
 
-   const showNotification = () => {
+   const showNotification = useCallback(() => {
       if ('Notification' in window) {
          Notification.requestPermission().then(permission => {
             if (permission === 'granted') {
@@ -260,15 +260,16 @@ export default function Player() {
                   body: `${currentSong.artist} - ${currentSong.title}`,
                   icon: `${currentSong.cover}`,
                });
+               notification.onshow = () => null;
             }
          });
       }
-   };
+   }, [currentSong]);
 
    useEffect(() => {
       showNotification();
       setCurrentSongIndex(currentSongIndex);
-   }, [currentSong]);
+   }, [currentSong, currentSongIndex, showNotification]);
    return (
       <React.Fragment>
          {isCoverOpen ? <FullSizeCover /> : isVolumeTrigger ? <VolumeTrigger /> : isToolBoxOpen && <ToolBox />}

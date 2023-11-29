@@ -5,6 +5,7 @@
    background-size: cover;
    backdrop-filter: blur(var(--blurring)) brightness(50%);
    color: white;
+   background: linear-gradient(0deg, rgba(14, 0, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
    & section {
       width: 100%;
@@ -159,6 +160,7 @@ input[type='range'] {
    overflow: hidden;
    width: 100%;
    -webkit-appearance: none;
+   appearance: none;
    background-color: rgba(255, 255, 255, 0.1);
    border-radius: 999px;
 }
