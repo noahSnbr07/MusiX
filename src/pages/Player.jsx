@@ -30,7 +30,7 @@ export default function Player() {
    const [copiedInfo, setCopiedInfo] = useState(false);
 
    function secondsToMinutes(seconds) {
-      return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
+      return `${Math.round(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
    }
 
    function minutesToSeconds(time) {
@@ -78,7 +78,6 @@ export default function Player() {
    // Update song time
    const handleSongTimeChange = (event) => {
       const newTime = parseFloat(event.target.value);
-      setCurrentTime(newTime);
       setSongTime(newTime);
       if (audioRef.current) {
          audioRef.current.currentTime = newTime;
@@ -174,6 +173,8 @@ export default function Player() {
             playRandomSong();
          } else if (!isRepeating && !isShuffle) {
             setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
+            togglePlayer()
+            setTimeout(() => { togglePlayer() }, 500);
             setCurrentTime(0);
          }
       }
@@ -300,7 +301,7 @@ export default function Player() {
                         max={minutesToSeconds(currentSong.length)}
                         className='musicLengthIndicatorInputRange'
                         onChange={handleSongTimeChange}
-                        value={Math.round(songTime)}
+                        value={songTime}
                      />
                      <div className='indicatorTimeLeft'>
                         <span>{secondsToMinutes(songTime)}</span>
