@@ -6,7 +6,6 @@ import '../styles/components/volumeTrigger.css';
 import '../styles/components/toolbox.css';
 
 export default function Player() {
-
    // Base variables for functionality of player
    const audioRef = useRef(null);
    const [isFullscreen, setFullscreen] = useState(false);

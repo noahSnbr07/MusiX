@@ -112,14 +112,6 @@
       "audio": "frequencies.mp3"
    },
    {
-      "id": 14,
-      "title": "Deutschland",
-      "artist": "Rammstein",
-      "cover": "https://i.scdn.co/image/ab67616d00001e02d3bf489c4d50a40fbe8f77e7",
-      "length": "5:23",
-      "audio": "deutschland.mp3"
-   },
-   {
       "id": 15,
       "title": "Adieu",
       "artist": "Rammstein",
@@ -550,5 +542,165 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e022f0c72cd7a4d0a89def38ce7",
       "length": "4:26",
       "audio": "bringitlive.mp3"
+   },
+   {
+      "id": 67,
+      "title": "Sorry for the Delay",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "2:53",
+      "audio": "sorryforthedelay.mp3"
+   },
+   {
+      "id": 68,
+      "title": "BUCKHEAD",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "3:04",
+      "audio": "buckhead.mp3"
+   },
+   {
+      "id": 69,
+      "title": "I Dream of Chrome",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "2:26",
+      "audio": "idreamofchrome.mp3"
+   },
+   {
+      "id": 70,
+      "title": "Champagne Face",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "2:21",
+      "audio": "champagneface.mp3"
+   },
+   {
+      "id": 71,
+      "title": "The Serpent and the Rainbow",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "2:58",
+      "audio": "theserpentandtherainbow.mp3"
+   },
+   {
+      "id": 72,
+      "title": "My Swisher Sweet, But My Sig Sauer",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "3:47",
+      "audio": "myswishersweetbutmysigsauer.mp3"
+   },
+   {
+      "id": 73,
+      "title": "Center Core Never More",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02299bb23855df7f9910ce7bcd",
+      "length": "2:45",
+      "audio": "centercorenevermore.mp3"
+   },
+   {
+      "id": 73,
+      "title": "Deutschland",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:51",
+      "audio": "deutschland.mp3"
+   },
+   {
+      "id": 74,
+      "title": "Radio",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:51",
+      "audio": "radio.mp3"
+   },
+   {
+      "id": 75,
+      "title": "Zeig Dich",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:18",
+      "audio": "zeigdich.mp3"
+   },
+   {
+      "id": 76,
+      "title": "Ausländer",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:41",
+      "audio": "auslaender.mp3"
+   },
+   {
+      "id": 77,
+      "title": "Sex",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "3:57",
+      "audio": "sex.mp3"
+   },
+   {
+      "id": 78,
+      "title": "Puppe",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:53",
+      "audio": "puppe.mp3"
+   },
+   {
+      "id": 79,
+      "title": "Was ich Liebe",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:29",
+      "audio": "wasichliebe.mp3"
+   },
+   {
+      "id": 80,
+      "title": "Diamant",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "2:34",
+      "audio": "diamant.mp3"
+   },
+   {
+      "id": 81,
+      "title": "Weit Weg",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:20",
+      "audio": "weitweg.mp3"
+   },
+   {
+      "id": 82,
+      "title": "Tattoo",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:11",
+      "audio": "tattoo.mp3"
+   },
+   {
+      "id": 83,
+      "title": "Hallomann",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0202add2c77fb6999e311a3248",
+      "length": "4:11",
+      "audio": "hallomann.mp3"
+   },
+   {
+      "id": 84,
+      "title": "SAUFEN AUFM SPIELPLATZ",
+      "artist": "Tiefundton",
+      "cover": "https://i.scdn.co/image/ab67616d00001e024cff475a4846100f4e8be1ab",
+      "length": "4:37",
+      "audio": "saufenaufmspielplatz.mp3"
+   },
+   {
+      "id": 85,
+      "title": "Feuerwasser",
+      "artist": "TekkSchuster",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0234a1a2bca2412ac18c1d0c3d",
+      "length": "2:47",
+      "audio": "feuerwasser.mp3"
    }
 ]

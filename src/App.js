@@ -1,6 +1,6 @@
 import { Routes, Route, Link, useResolvedPath, useMatch, Navigate } from 'react-router-dom';
 import Player from './pages/Player';
-import Songs from './pages/Songs';
+import Library from './pages/Library';
 import Icon from '../src/config/components/Icon';
 import NoMatch from './pages/NoMatch';
 import Settings from './pages/Settings';
@@ -10,7 +10,7 @@ import '../src/styles/responsiveDesign.css';
 import '../src/styles/interface.css';
 export default function App() {
   songLibrary.sort((a, b) => a.artist.toLowerCase().localeCompare(b.artist.toLowerCase()));
-  // React.useEffect(() => { localStorage.setItem('songIndex', songLibrary.length) }, [])
+
   const CustomLink = ({ icon, to }) => {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
@@ -28,9 +28,11 @@ export default function App() {
         <main className='viewPort'>
           <Routes>
             <Route path="/">
-              <Route path="" element={<Navigate to={"/songs"} />} />
-              <Route index path="songs" element={<Songs />} />
-              <Route path="player/:songID" element={<Player />} />
+              <Route index path="" element={<Navigate to={"/library"} />} />
+              <Route path="library" element={<Library />} />
+              <Route path="player">
+                <Route path=':songID' element={<Player />} />
+              </Route>
               <Route path="settings" element={<Settings />} />
             </Route>
             <Route path='*' element={<NoMatch />} />
@@ -38,7 +40,7 @@ export default function App() {
         </main>
         <nav className='navBar'>
           <ul>
-            <CustomLink icon={'list'} to='songs' />
+            <CustomLink icon={'list'} to='library' />
             <CustomLink icon={'music_note'} to='player/:songID' />
             <CustomLink icon={'settings'} to='settings' />
           </ul>
