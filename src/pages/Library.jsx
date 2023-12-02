@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import '../styles/songs.css';
 import Icon from '../config/components/Icon';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import songLibrary from '../libs/Library.json';
 
 export default function Songs() {
-  const { filter } = useParams();
-  console.info(filter);
   const [inputText, setInputText] = useState("");
   const inputHandler = (e) => setInputText(e.target.value.toLowerCase());
 
   const filteredSongs = songLibrary.filter((song) => {
-    return song.title.toLowerCase().includes(inputText);
+    let titleMatch = song.title.toLowerCase().includes(inputText);
+    let artistMatch = song.artist.toLowerCase().includes(inputText);
+
+    return titleMatch || artistMatch;
   });
   return (
     <React.Fragment>

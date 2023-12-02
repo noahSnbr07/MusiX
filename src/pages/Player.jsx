@@ -89,6 +89,10 @@ export default function Player() {
    const toggleShuffleMode = () => setShuffle(!(isShuffle));
    const toggleVolumeTrigger = () => setVolumeTriggerOpen(!(isVolumeTrigger));
    const toggleFullscreenCover = () => setCoverOpen(!(isCoverOpen));
+   const resetPlayerState = () => {
+      togglePlayer()
+      setTimeout(() => { togglePlayer() }, 500);
+   }
 
    //set volume by keys
    const setVolume = (newValue) => {
@@ -106,10 +110,14 @@ export default function Player() {
    // Change the song
    const changeSongManually = useCallback((index) => {
       if (index >= 0 && index < songLibrary.length) {
-         if (isShuffle) { playRandomSong() }
-         else if (isRepeating) { setCurrentTime(0); }
+         if (isShuffle) {
+            playRandomSong(); resetPlayerState();
+         }
+         else if (isRepeating) {
+            setCurrentTime(0); resetPlayerState();
+         }
          else {
-            setCurrentSongIndex(index);
+            setCurrentSongIndex(index); resetPlayerState();
          }
       }
    }, [playRandomSong, isRepeating, isShuffle]);
@@ -123,7 +131,6 @@ export default function Player() {
 
       navigator.clipboard.writeText(JSON.stringify(currentSong))
          .then(() => {
-            console.log('Song object copied to clipboard');
             setCopiedInfo(true);
             setTimeout(() => { setCopiedInfo(false); }, 1000);
          })
@@ -164,7 +171,6 @@ export default function Player() {
    );
 
    useEffect(() => {
-      console.log(songTime.toFixed(0), minutesToSeconds(currentSong.length));
       if (songTime.toFixed(0) >= minutesToSeconds(currentSong.length)) {
          if ((isRepeating && !isShuffle) || (isRepeating && isShuffle)) {
             setCurrentTime(0);
@@ -172,8 +178,7 @@ export default function Player() {
             playRandomSong();
          } else if (!isRepeating && !isShuffle) {
             setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
-            togglePlayer()
-            setTimeout(() => { togglePlayer() }, 500);
+            resetPlayerState();
             setCurrentTime(0);
          }
       }
