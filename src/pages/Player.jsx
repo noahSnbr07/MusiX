@@ -29,7 +29,7 @@ export default function Player() {
    const [copiedInfo, setCopiedInfo] = useState(false);
 
    function secondsToMinutes(seconds) {
-      return `${Math.round(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
+      return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
    }
 
    function minutesToSeconds(time) {
