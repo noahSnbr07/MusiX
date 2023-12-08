@@ -854,5 +854,37 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e028437065ce3143ee0659700e0",
       "length": "1:56",
       "audio": "damagedealt.mp3"
+   },
+   {
+      "id": 106,
+      "title": "Absolute In Doubt",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028437065ce3143ee0659700e0",
+      "length": "3:47",
+      "audio": "absoluteindoubt.mp3"
+   },
+   {
+      "id": 107,
+      "title": "Love Hurts",
+      "artist": "Yung Goth",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0265382b921ca0ab2428a97235",
+      "length": "2:33",
+      "audio": "lovehurts.mp3"
+   },
+   {
+      "id": 108,
+      "title": "Kyoto",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029f1fcdc10db2aa3ad1428fe1",
+      "length": "4:41",
+      "audio": "kyoto.mp3"
+   },
+   {
+      "id": 109,
+      "title": "Highway Patrol",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0261064b032571008734f8810c",
+      "length": "3:32",
+      "audio": "highwaypatrol.mp3"
    }
 ]

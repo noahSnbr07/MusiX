@@ -9,8 +9,6 @@ import songLibrary from '../src/libs/Library.json';
 import '../src/styles/responsiveDesign.css';
 import '../src/styles/interface.css';
 export default function App() {
-  songLibrary.sort((a, b) => a.artist.toLowerCase().localeCompare(b.artist.toLowerCase()));
-
   const CustomLink = ({ icon, to }) => {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
