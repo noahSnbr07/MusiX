@@ -859,7 +859,7 @@
       "id": 106,
       "title": "Absolute In Doubt",
       "artist": "Lil Peep",
-      "cover": "https://i.scdn.co/image/ab67616d00001e028437065ce3143ee0659700e0",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021fdf8f713b0f86a99f5483b0",
       "length": "3:47",
       "audio": "absoluteindoubt.mp3"
    },
@@ -886,5 +886,125 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e0261064b032571008734f8810c",
       "length": "3:32",
       "audio": "highwaypatrol.mp3"
+   },
+   {
+      "id": 110,
+      "title": "Sonne",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e020ff111ab00e9682733a3b063",
+      "length": "4:05",
+      "audio": "sonne.mp3"
+   },
+   {
+      "id": 112,
+      "title": "Viva los Tioz",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0211a24677a45237e311b23fea",
+      "length": "3:56",
+      "audio": "vivalostioz.mp3"
+   },
+   {
+      "id": 113,
+      "title": "Ich glaube es ist Liebe",
+      "artist": "Tiefundton",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0201b3f8a6b03453e60678e415",
+      "length": "6:11",
+      "audio": "ichglaubeesistliebe.mp3"
+   },
+   {
+      "id": 114,
+      "title": "Ease my Mind",
+      "artist": "Doruksen",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021dac3379227d8423e8c661a1",
+      "length": "6:27",
+      "audio": "easemymind.mp3"
+   },
+   {
+      "id": 115,
+      "title": "Traffic",
+      "artist": "Stan Christ",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0259e30ac95c0ecb295984ee84",
+      "length": "5:11",
+      "audio": "traffic.mp3"
+   },
+   {
+      "id": 116,
+      "title": "Safe And Sound",
+      "artist": "ZYZZ",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b1e88887c0095b0f2cb3c10c",
+      "length": "2:00",
+      "audio": "safeandsound.mp3"
+   },
+   {
+      "id": 117,
+      "title": "Just Dance (Hardstyle)",
+      "artist": "rigbus",
+      "cover": "https://i.scdn.co/image/ab67616d00001e029ddd29da6d88fece217f5f61",
+      "length": "2:26",
+      "audio": "justdancehardstyle.mp3"
+   },
+   {
+      "id": 118,
+      "title": "Star Shopping",
+      "artist": "Lil Peep",
+      "cover": "https://i.scdn.co/image/ab67616d00001e026404fdef267b14d7a548f182",
+      "length": "2:22",
+      "audio": "starshopping.mp3"
+   },
+   {
+      "id": 119,
+      "title": "Afghanistan",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0261064b032571008734f8810c",
+      "length": "2:49",
+      "audio": "afghanistan.mp3"
+   },
+   {
+      "id": 120,
+      "title": "If Self-Destruction Was an Olympic Event, I'd Be Tonya Harding",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02b25093d7ccdce4a848988f9e",
+      "length": "2:22",
+      "audio": "ifselfdestructionwasanolympiceventidbetonyaharding.mp3"
+   },
+   {
+      "id": 121,
+      "title": "Pemex",
+      "artist": "Shakewell",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025ac3e3fe87544c6aea1bc54d",
+      "length": "3:12",
+      "audio": "pemex.mp3"
+   },
+   {
+      "id": 122,
+      "title": "O Pana!",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0209c67f4a00626c5dfacbdf6f",
+      "length": "2:08",
+      "audio": "opana.mp3"
+   },
+   {
+      "id": 123,
+      "title": "New Chains, Same Chackles",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0207bba1f8abbeb68e5d0c3477",
+      "length": "1:57",
+      "audio": "newchainssameshackles.mp3"
+   },
+   {
+      "id": 124,
+      "title": "die with you baby",
+      "artist": "Yung Goth",
+      "cover": "https://i.scdn.co/image/ab67616d00001e020cfcfb07ae5b9aaabdeb19c1",
+      "length": "2:49",
+      "audio": "diewithyoubaby.mp3"
+   },
+   {
+      "id": 125,
+      "title": "1000 Rounds",
+      "artist": "Pouya, Ghostmane",
+      "cover": "https://i.scdn.co/image/ab67616d00001e023ac6e7f8c2352ca560ecd6a0",
+      "length": "2:43",
+      "audio": "thousandrounds.mp3"
    }
 ]

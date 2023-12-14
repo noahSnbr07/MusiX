@@ -9,34 +9,28 @@ export default function Player() {
    // Base variables for functionality of player
    const audioRef = useRef(null);
    const [isFullscreen, setFullscreen] = useState(false);
-   let isPlaying = useRef(true);
+   let isPlaying = useRef(false);
    const [currentSongIndex, setCurrentSongIndex] = useState(parseInt(localStorage.getItem('songIndex')) || 0);
    const currentSong = songLibrary[currentSongIndex];
    const [isShuffle, setShuffle] = useState(false);
    const [isRepeating, setRepeating] = useState(false);
-
    // Timing values
    const [currentTime, setCurrentTime] = useState(0);
    const [songTime, setSongTime] = useState(0);
-
    // Volume based variables
    const volumeLevel = useRef(1);
-
    // Components variables
    const [isCoverOpen, setCoverOpen] = useState(false);
    const [isVolumeTrigger, setVolumeTriggerOpen] = useState(false);
    const [isToolBoxOpen, setIsToolBoxOpen] = useState(false);
    const [copiedInfo, setCopiedInfo] = useState(false);
-
    function secondsToMinutes(seconds) {
       return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
    }
-
    function minutesToSeconds(time) {
       const [minutes, seconds] = time.split(':').map(Number);
       return minutes * 60 + seconds;
    }
-
    // Update time values on display
    useEffect(() => {
       audioRef.current = new Audio(require(`../music/${currentSong.audio}`));
@@ -48,20 +42,17 @@ export default function Player() {
          }
       };
    }, [currentSong]);
-
    useEffect(() => {
       const interval = setInterval(() => {
          setSongTime(audioRef.current.currentTime);
       }, 1000);
       return () => clearInterval(interval);
    }, []);
-
    useEffect(() => {
       audioRef.current.currentTime = currentTime;
       isPlaying.current ? audioRef.current.play()
          .then(() => { }).catch((error) => console.error(error)) : audioRef.current.pause();
    }, [currentTime]);
-
    // Play/pause function
    const togglePlayer = () => {
       if (isPlaying.current) {
@@ -73,7 +64,6 @@ export default function Player() {
          isPlaying.current ? audioRef.current.play().then(() => { }).catch((error) => console.error(error)) : audioRef.current.pause();
       }
    };
-
    // Update song time
    const handleSongTimeChange = (event) => {
       const newTime = parseFloat(event.target.value);
@@ -82,7 +72,6 @@ export default function Player() {
          audioRef.current.currentTime = newTime;
       }
    };
-
    //component toggle functions
    const toggleRepeat = () => setRepeating(!(isRepeating));
    const toggleToolBox = () => setIsToolBoxOpen(!(isToolBoxOpen));
@@ -91,9 +80,8 @@ export default function Player() {
    const toggleFullscreenCover = () => setCoverOpen(!(isCoverOpen));
    const resetPlayerState = () => {
       togglePlayer()
-      setTimeout(() => { togglePlayer() }, 500);
+      setTimeout(() => { togglePlayer() }, 1000);
    }
-
    //set volume by keys
    const setVolume = (newValue) => {
       newValue >= 1 ? newValue = 1 :
@@ -101,12 +89,10 @@ export default function Player() {
             volumeLevel.current = newValue;
       audioRef.current.volume = newValue;
    };
-
    const playRandomSong = useCallback(() => {
       setCurrentSongIndex(Math.floor(Math.random() * songLibrary.length));
       setCurrentTime(0);
    }, []);
-
    // Change the song
    const changeSongManually = useCallback((index) => {
       if (index >= 0 && index < songLibrary.length) {
@@ -121,14 +107,12 @@ export default function Player() {
          }
       }
    }, [playRandomSong, isRepeating, isShuffle]);
-
    function copyCurrentSong() {
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
          console.error('Clipboard API not supported on this device.');
          alert('your browser does not support the MWD Clipboard Api functions');
          return;
       }
-
       navigator.clipboard.writeText(JSON.stringify(currentSong))
          .then(() => {
             setCopiedInfo(true);
@@ -138,14 +122,12 @@ export default function Player() {
             console.error('Error copying song object to clipboard', error);
          });
    }
-
    // Handle volume change
    const handleVolumeChange = (e) => {
       const newVolume = parseFloat(e.target.value);
       volumeLevel.current = newVolume;
       audioRef.current.volume = newVolume;
    };
-
    // Toggle full screen
    const toggleFullScreen = () => {
       if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -161,15 +143,12 @@ export default function Player() {
          exitFullScreen && exitFullScreen.call(document);
       }
    };
-
-
    // Component to view song cover in full size
    const FullSizeCover = () => (
       <div onClick={toggleFullscreenCover} className='fullSizeCover'>
          <img loading='lazy' src={currentSong.cover} alt='Song Cover' />
       </div>
    );
-
    useEffect(() => {
       if (songTime.toFixed(0) >= minutesToSeconds(currentSong.length)) {
          if ((isRepeating && !isShuffle) || (isRepeating && isShuffle)) {
@@ -183,7 +162,6 @@ export default function Player() {
          }
       }
    }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle, playRandomSong]);
-
    // Volume Trigger component
    const VolumeTrigger = () => (
       <div onClick={toggleVolumeTrigger} className='volumeTrigger'>
@@ -200,7 +178,6 @@ export default function Player() {
          </div>
       </div>
    );
-
    //tools component
    const ToolBox = () => {
       return (
@@ -226,7 +203,6 @@ export default function Player() {
          </div>
       );
    }
-
    document.onkeydown = (e) => {
       if (e.keyCode === 32) { togglePlayer(); }
       switch (e.key) {
@@ -238,7 +214,6 @@ export default function Player() {
          default: return;
       }
    }
-
    useEffect(() => {
       // Check if the browser supports the Media Session API
       if ('mediaSession' in navigator) {
@@ -255,7 +230,6 @@ export default function Player() {
          navigator.mediaSession.setActionHandler('nexttrack', () => { changeSongManually(currentSongIndex + 1); });
       }
    }, [currentSong, changeSongManually, currentSongIndex]);
-
    const showNotification = useCallback(() => {
       if ('Notification' in window) {
          Notification.requestPermission().then(permission => {
@@ -269,7 +243,6 @@ export default function Player() {
          });
       }
    }, [currentSong]);
-
    useEffect(() => {
       showNotification();
       setCurrentSongIndex(currentSongIndex);
