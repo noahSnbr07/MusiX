@@ -1,0 +1,95 @@
+[33mcommit f6eb3f1f0f007e6fd2a538073e761d65dd94717b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Sat Dec 16 23:28:21 2023 +0100
+
+    some eslint warnings fixed
+
+[33mcommit d46ddc50e0353656440bd8e1dfafe9e9dc89cdf0[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Thu Dec 14 15:05:28 2023 +0100
+
+    16 new songs
+
+[33mcommit 232a4335faa107b2d387625ea785956678bd5b90[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Fri Dec 8 16:27:59 2023 +0100
+
+    new sorting, new songs
+
+[33mcommit 5d9cde28850234e02d4fab7ea8e3801ef6503af2[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Sat Dec 2 23:40:42 2023 +0100
+
+    new songs, new settings info
+
+[33mcommit 23b43cc71748846a91cad218e97bdcfe226797dd[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Sat Dec 2 22:29:16 2023 +0100
+
+    new album: N/O/I/S/E
+
+[33mcommit ec3847bb9c2356c76749b83fc239a6f3054259ff[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Thu Nov 30 17:04:08 2023 +0100
+
+    bunch of new songs
+
+[33mcommit 9e6826c83cbc72d550db298057282d1359d22ac8[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Wed Nov 29 21:50:40 2023 +0100
+
+    autoplay fix
+
+[33mcommit 15508575dd342e750956e97201ae2081fc8d9e64[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Wed Nov 29 16:38:20 2023 +0100
+
+    fixed autoplay bug
+
+[33mcommit edaa2b3afa6d801e9aaa46cabf3b0cbacd5d1f67[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Tue Nov 28 20:30:40 2023 +0100
+
+    new songs, new styles, new feature, new acessebility optimization
+
+[33mcommit e2fe83ebb036302247930738148ab90ece5893bd[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 21:22:22 2023 +0100
+
+    new feature: copy song object
+
+[33mcommit 70e9148a062bf39e0c572590c68f03152a219724[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 20:32:01 2023 +0100
+
+    another css fix for accessibility
+
+[33mcommit d66e6076d0cc82c12edf6ab937e06703ce7c1c52[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 20:24:53 2023 +0100
+
+    css fixes
+
+[33mcommit d9584e2fc1c98702f26f0a1b4399eb426fe72e92[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 20:07:59 2023 +0100
+
+    changed bat files
+
+[33mcommit 3fd8f9f545cfb3f9334d3b907693d4e1ae5efe2d[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 20:05:04 2023 +0100
+
+    fixed bat files
+
+[33mcommit 1e7dc31de440142a256e2a87ff1539a39d6cb06e[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 19:45:04 2023 +0100
+
+    republish
+
+[33mcommit be6b586876c014fa9b0a191cf0ff987aecd5c89b[m
+Author: noahSnbr07 <nur.noah.saschenbrecker@gmail.com>
+Date:   Mon Nov 27 19:44:15 2023 +0100
+
+    first commit
