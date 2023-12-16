@@ -12,18 +12,23 @@ export default function Songs() {
 
   const inputHandler = (e) => setInputText(e.target.value.toLowerCase());
 
+  const sortetTitle = [...sortedSongs].sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
+  const sortetArtist = [...sortedSongs].sort((a, b) => a.artist.toLowerCase().localeCompare(b.artist.toLowerCase()));
+  const sortetTime = [...sortedSongs].reverse();
+  const sortetReverse = [...sortedSongs].sort((a, b) => a.length.toLowerCase().localeCompare(b.length.toLowerCase()));
+
   useEffect(() => {
     const sortSongs = () => {
       switch (filterIndex) {
-        case 0: setSortedSongs([...sortedSongs].sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()))); break;
-        case 1: setSortedSongs([...sortedSongs].sort((a, b) => a.artist.toLowerCase().localeCompare(b.artist.toLowerCase()))); break;
-        case 2: setSortedSongs(songLibrary.reverse()); break;
-        case 3: setSortedSongs([...sortedSongs].sort((a, b) => a.length.toLowerCase().localeCompare(b.length.toLowerCase()))); break;
+        case 0: setSortedSongs(sortetTitle); break;
+        case 1: setSortedSongs(sortetArtist); break;
+        case 2: setSortedSongs(sortetTime); break;
+        case 3: setSortedSongs(sortetReverse); break;
         default: break;
       }
     };
     sortSongs();
-  }, [filterIndex]);
+  }, [filterIndex, sortetArtist, sortetTitle, sortetReverse, sortetTime]);
 
   const adaptFilter = (index) => { index >= filters.length ? setFilterIndex(0) : setFilterIndex(filterIndex + 1); };
 

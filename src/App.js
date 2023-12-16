@@ -5,7 +5,6 @@ import Icon from '../src/config/components/Icon';
 import NoMatch from './pages/NoMatch';
 import Settings from './pages/Settings';
 import React from 'react';
-import songLibrary from '../src/libs/Library.json';
 import '../src/styles/responsiveDesign.css';
 import '../src/styles/interface.css';
 export default function App() {

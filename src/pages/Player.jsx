@@ -4,7 +4,7 @@ import Icon from '../config/components/Icon.jsx';
 import songLibrary from '../libs/Library.json';
 import '../styles/components/volumeTrigger.css';
 import '../styles/components/toolbox.css';
-
+import convertTime from '../config/functions/convertTime.js';
 export default function Player() {
    // Base variables for functionality of player
    const audioRef = useRef(null);
@@ -26,10 +26,6 @@ export default function Player() {
    const [copiedInfo, setCopiedInfo] = useState(false);
    function secondsToMinutes(seconds) {
       return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
-   }
-   function minutesToSeconds(time) {
-      const [minutes, seconds] = time.split(':').map(Number);
-      return minutes * 60 + seconds;
    }
    // Update time values on display
    useEffect(() => {
@@ -78,10 +74,11 @@ export default function Player() {
    const toggleShuffleMode = () => setShuffle(!(isShuffle));
    const toggleVolumeTrigger = () => setVolumeTriggerOpen(!(isVolumeTrigger));
    const toggleFullscreenCover = () => setCoverOpen(!(isCoverOpen));
-   const resetPlayerState = () => {
-      togglePlayer()
+
+   const resetPlayerState = useCallback(() => {
+      togglePlayer();
       setTimeout(() => { togglePlayer() }, 1000);
-   }
+   }, []);
    //set volume by keys
    const setVolume = (newValue) => {
       newValue >= 1 ? newValue = 1 :
@@ -106,7 +103,7 @@ export default function Player() {
             setCurrentSongIndex(index); resetPlayerState();
          }
       }
-   }, [playRandomSong, isRepeating, isShuffle]);
+   }, [playRandomSong, isRepeating, isShuffle, resetPlayerState]);
    function copyCurrentSong() {
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
          console.error('Clipboard API not supported on this device.');
@@ -150,7 +147,7 @@ export default function Player() {
       </div>
    );
    useEffect(() => {
-      if (songTime.toFixed(0) >= minutesToSeconds(currentSong.length)) {
+      if (songTime.toFixed(0) >= convertTime(currentSong.length)) {
          if ((isRepeating && !isShuffle) || (isRepeating && isShuffle)) {
             setCurrentTime(0);
          } else if (!isRepeating && isShuffle) {
@@ -161,7 +158,7 @@ export default function Player() {
             setCurrentTime(0);
          }
       }
-   }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle, playRandomSong]);
+   }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle, playRandomSong, resetPlayerState]);
    // Volume Trigger component
    const VolumeTrigger = () => (
       <div onClick={toggleVolumeTrigger} className='volumeTrigger'>
@@ -276,7 +273,7 @@ export default function Player() {
                      <input
                         type='range'
                         min={0}
-                        max={minutesToSeconds(currentSong.length)}
+                        max={convertTime(currentSong.length)}
                         className='musicLengthIndicatorInputRange'
                         onChange={handleSongTimeChange}
                         value={songTime}

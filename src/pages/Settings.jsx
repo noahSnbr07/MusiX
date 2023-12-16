@@ -26,17 +26,17 @@ export default function Settings() {
             <ul className='contacts'>
                <li>
                   <a href='https://github.com/noahSnbr07'>
-                     <img src={github} />
+                     <img alt='github link' src={github} />
                   </a>
                </li>
                <li>
                   <a href='https://www.instagram.com/noah.snbr'>
-                     <img src={insta} />
+                     <img alt='instagram link' src={insta} />
                   </a>
                </li>
                <li>
                   <a href='mailto:nur.noah.saschenbrecker@gmail.com'>
-                     <img src={gmail} />
+                     <img alt='gmail link' src={gmail} />
                   </a>
                </li>
             </ul>
@@ -54,7 +54,7 @@ export default function Settings() {
             <Icon icon={'alarm'} />
          </button>
          <button className='clearStorage'>
-            Songs: {Library.length}
+            Songs: {(Library.length - 1)}
          </button>
       </div >
    );
