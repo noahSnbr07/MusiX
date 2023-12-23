@@ -12,8 +12,8 @@ export default function Player() {
    let isPlaying = useRef(false);
    const [currentSongIndex, setCurrentSongIndex] = useState(parseInt(localStorage.getItem('songIndex')) || 0);
    const currentSong = songLibrary[currentSongIndex];
-   const [isShuffle, setShuffle] = useState(false);
-   const [isRepeating, setRepeating] = useState(false);
+   const [playModes, setPlayModes] = useState(['resume', 'repeat', 'shuffle']);
+   const [playMode, setPlayMode] = useState(0);
    // Timing values
    const [currentTime, setCurrentTime] = useState(0);
    const [songTime, setSongTime] = useState(0);
@@ -69,9 +69,7 @@ export default function Player() {
       }
    };
    //component toggle functions
-   const toggleRepeat = () => setRepeating(!(isRepeating));
    const toggleToolBox = () => setIsToolBoxOpen(!(isToolBoxOpen));
-   const toggleShuffleMode = () => setShuffle(!(isShuffle));
    const toggleVolumeTrigger = () => setVolumeTriggerOpen(!(isVolumeTrigger));
    const toggleFullscreenCover = () => setCoverOpen(!(isCoverOpen));
 
@@ -79,6 +77,14 @@ export default function Player() {
       togglePlayer();
       setTimeout(() => { togglePlayer() }, 1000);
    }, []);
+
+   const togglePlayMode = () => {
+      if ((playMode + 1 >= playModes.length)) {
+         setPlayMode(0);
+      } else {
+         setPlayMode(playMode + 1)
+      }
+   }
    //set volume by keys
    const setVolume = (newValue) => {
       newValue >= 1 ? newValue = 1 :
@@ -87,23 +93,23 @@ export default function Player() {
       audioRef.current.volume = newValue;
    };
    const playRandomSong = useCallback(() => {
-      setCurrentSongIndex(Math.floor(Math.random() * songLibrary.length));
       setCurrentTime(0);
+      setCurrentSongIndex(Math.floor(Math.random() * songLibrary.length));
    }, []);
    // Change the song
    const changeSongManually = useCallback((index) => {
       if (index >= 0 && index < songLibrary.length) {
-         if (isShuffle) {
+         if (playMode === 2) {
             playRandomSong(); resetPlayerState();
          }
-         else if (isRepeating) {
+         else if (playMode === 1) {
             setCurrentTime(0); resetPlayerState();
          }
          else {
             setCurrentSongIndex(index); resetPlayerState();
          }
       }
-   }, [playRandomSong, isRepeating, isShuffle, resetPlayerState]);
+   }, [playRandomSong, playMode, resetPlayerState]);
    function copyCurrentSong() {
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
          console.error('Clipboard API not supported on this device.');
@@ -148,17 +154,18 @@ export default function Player() {
    );
    useEffect(() => {
       if (songTime.toFixed(0) >= convertTime(currentSong.length)) {
-         if ((isRepeating && !isShuffle) || (isRepeating && isShuffle)) {
-            setCurrentTime(0);
-         } else if (!isRepeating && isShuffle) {
-            playRandomSong();
-         } else if (!isRepeating && !isShuffle) {
-            setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
-            resetPlayerState();
-            setCurrentTime(0);
+         switch (playMode) {
+            case 0: {
+               setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
+               resetPlayerState();
+               setCurrentTime(0);
+            } break;
+            case 1: { setCurrentTime(0); } break;
+            case 2: { playRandomSong(); resetPlayerState(); setCurrentTime(0); } break;
+            default: return console.error('error while playing next song');
          }
       }
-   }, [songTime, currentSong.length, isRepeating, currentSongIndex, isShuffle, playRandomSong, resetPlayerState]);
+   }, [songTime, currentSong.length, currentSongIndex, playMode, playRandomSong, resetPlayerState]);
    // Volume Trigger component
    const VolumeTrigger = () => (
       <div onClick={toggleVolumeTrigger} className='volumeTrigger'>
@@ -183,10 +190,7 @@ export default function Player() {
                <Icon onClick={copyCurrentSong} icon={copiedInfo ? 'done' : 'data_object'} />
             </button>
             <button>
-               <Icon onClick={toggleRepeat} icon={isRepeating ? 'repeat' : 'start'} />
-            </button>
-            <button>
-               <Icon onClick={toggleShuffleMode} icon={isShuffle ? 'shuffle_on' : 'shuffle'} />
+               <Icon onClick={togglePlayMode} icon={playModes[playMode]} />
             </button>
             <button>
                <Icon onClick={() => { toggleVolumeTrigger(); toggleToolBox(); }} icon='volume_up' />
