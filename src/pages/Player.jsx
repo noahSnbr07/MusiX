@@ -12,7 +12,7 @@ export default function Player() {
    let isPlaying = useRef(false);
    const [currentSongIndex, setCurrentSongIndex] = useState(parseInt(localStorage.getItem('songIndex')) || 0);
    const currentSong = songLibrary[currentSongIndex];
-   const [playModes, setPlayModes] = useState(['resume', 'repeat', 'shuffle']);
+   const [playModes] = useState(['resume', 'repeat', 'shuffle']);
    const [playMode, setPlayMode] = useState(0);
    // Timing values
    const [currentTime, setCurrentTime] = useState(0);
@@ -155,13 +155,13 @@ export default function Player() {
    useEffect(() => {
       if (songTime.toFixed(0) >= convertTime(currentSong.length)) {
          switch (playMode) {
-            case 0: {
+            case (0): {
                setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
                resetPlayerState();
                setCurrentTime(0);
             } break;
-            case 1: { setCurrentTime(0); } break;
-            case 2: { playRandomSong(); resetPlayerState(); setCurrentTime(0); } break;
+            case (1): { setCurrentTime(0); } break;
+            case (2): { playRandomSong(); resetPlayerState(); setCurrentTime(0); } break;
             default: return console.error('error while playing next song');
          }
       }
@@ -209,8 +209,9 @@ export default function Player() {
       switch (e.key) {
          case 'ArrowLeft': setCurrentSongIndex(currentSongIndex - 1); break;
          case 'ArrowRight': changeSongManually(currentSongIndex + 1); break;
-         case 'ArrowUp': setVolume(audioRef.current.volume + 0.1); break;
-         case 'ArrowDown': setVolume(audioRef.current.volume - 0.1); break;
+         case 'ArrowUp': setVolume(audioRef.current.volume + 0.05); break;
+         case 'ArrowDown': setVolume(audioRef.current.volume - 0.05); break;
+         case 'f': toggleFullscreenCover(); break;
          case 'c': toggleToolBox(); break;
          default: return;
       }
