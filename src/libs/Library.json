@@ -1022,5 +1022,53 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e02646a3ff29b70c65ace36a778",
       "length": "4:15",
       "audio": "blinded.mp3"
+   },
+   {
+      "id": 127,
+      "title": "Leglock",
+      "artist": "Shakewell",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02bb935040f6f4015674f9ece5",
+      "length": "2:05",
+      "audio": "leglock.mp3"
+   },
+   {
+      "id": 128,
+      "title": "Pontiac Sunfire",
+      "artist": "$uicideBoy$",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02828e3c89d67979fc678be0bb",
+      "length": "2:08",
+      "audio": "pontiacsunfire.mp3"
+   },
+   {
+      "id": 129,
+      "title": "Meister der Lügen",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e027634ec8f0599c66e26ef0456",
+      "length": "2:08",
+      "audio": "meisterderluegen.mp3"
+   },
+   {
+      "id": 130,
+      "title": "Gehasst, Verdammt, Vergöttert",
+      "artist": "Böhse Onkelz",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02bedbba3a1ecf60665478c136",
+      "length": "3:06",
+      "audio": "meisterderluegen.mp3"
+   },
+   {
+      "id": 131,
+      "title": "Red Bottom Sky",
+      "artist": "Yung Lean",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02543533e92a8a336dee9e9bd1",
+      "length": "5:03",
+      "audio": "redbottomsky.mp3"
+   },
+   {
+      "id": 132,
+      "title": "Big Glocks",
+      "artist": "Fat Nick, Pouya",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02c47431075b5d1d8fbaf4b813",
+      "length": "3:10",
+      "audio": "bigglocks.mp3"
    }
 ]
