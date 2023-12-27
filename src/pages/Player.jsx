@@ -5,6 +5,7 @@ import songLibrary from '../libs/Library.json';
 import '../styles/components/volumeTrigger.css';
 import '../styles/components/toolbox.css';
 import convertTime from '../config/functions/convertTime.js';
+import Message from '../config/functions/Message.js';
 export default function Player() {
    // Base variables for functionality of player
    const audioRef = useRef(null);
@@ -251,6 +252,7 @@ export default function Player() {
    }, [currentSong, currentSongIndex, showNotification]);
    return (
       <React.Fragment>
+         <Message message={playMode === 0 ? 'normal' : playMode === 1 ? 'repeat' : 'shuffle'} />
          {isCoverOpen ? <FullSizeCover /> : isVolumeTrigger ? <VolumeTrigger /> : isToolBoxOpen && <ToolBox />}
          <main style={{ backgroundImage: `url(${currentSong.cover})` }} className='backgroundBlurSection'>
             <div className='player'>

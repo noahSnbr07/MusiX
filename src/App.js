@@ -7,6 +7,7 @@ import Settings from './pages/Settings';
 import React from 'react';
 import '../src/styles/responsiveDesign.css';
 import '../src/styles/interface.css';
+import Message from './config/functions/Message';
 export default function App() {
   const CustomLink = ({ icon, to }) => {
     const resolvedPath = useResolvedPath(to);
