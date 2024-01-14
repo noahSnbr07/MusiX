@@ -1070,5 +1070,37 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e02c47431075b5d1d8fbaf4b813",
       "length": "3:10",
       "audio": "bigglocks.mp3"
+   },
+   {
+      "id": 133,
+      "title": "Angst",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e021108fef87966d83948b6a037",
+      "length": "3:44",
+      "audio": "angst.mp3"
+   },
+   {
+      "id": 134,
+      "title": "Feuer frei",
+      "artist": "Rammstein",
+      "cover": "https://i.scdn.co/image/ab67616d00001e028b2c42026277efc3e058855b",
+      "length": "3:10",
+      "audio": "feuerfrei.mp3"
+   },
+   {
+      "id": 135,
+      "title": "Dosenbier",
+      "artist": "DORFTEKK",
+      "cover": "https://i.scdn.co/image/ab67616d00001e0281f915a4839940cf6d1232f3",
+      "length": "2:25",
+      "audio": "dosenbier.mp3"
+   },
+   {
+      "id": 136,
+      "title": "Kapitän zur See",
+      "artist": "DORFTEKK",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02850a51b1da7dd2975ce16e1c",
+      "length": "2:57",
+      "audio": "kapitaenzursee.mp3"
    }
 ]
