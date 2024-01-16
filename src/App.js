@@ -7,7 +7,7 @@ import Settings from './pages/Settings';
 import React from 'react';
 import '../src/styles/responsiveDesign.css';
 import '../src/styles/interface.css';
-import Message from './config/functions/Message';
+import Index from './pages/Index';
 export default function App() {
   const CustomLink = ({ icon, to }) => {
     const resolvedPath = useResolvedPath(to);
@@ -25,14 +25,13 @@ export default function App() {
       <div className="App">
         <main className='viewPort'>
           <Routes>
-            <Route path="/">
-              <Route index path="" element={<Navigate to={"/library"} />} />
-              <Route path="library" element={<Library />} />
-              <Route path="player">
-                <Route path=':songID' element={<Player />} />
-              </Route>
-              <Route path="settings" element={<Settings />} />
+            <Route index element={<Index />} />
+            <Route path='index' element={<Index />} />
+            <Route path="library" element={<Library />} />
+            <Route path="player">
+              <Route path=':songID' element={<Player />} />
             </Route>
+            <Route path="settings" element={<Settings />} />
             <Route path='*' element={<NoMatch />} />
           </Routes>
         </main>
