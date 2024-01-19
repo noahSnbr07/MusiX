@@ -7,6 +7,7 @@ import '../styles/components/toolbox.css';
 import convertTime from '../config/functions/convertTime.js';
 import Message from '../config/functions/Message.js';
 export default function Player() {
+
    // Base variables for functionality of player
    const audioRef = useRef(null);
    const [isFullscreen, setFullscreen] = useState(false);
@@ -15,19 +16,24 @@ export default function Player() {
    const currentSong = songLibrary[currentSongIndex];
    const [playModes] = useState(['resume', 'repeat', 'shuffle']);
    const [playMode, setPlayMode] = useState(0);
+
    // Timing values
    const [currentTime, setCurrentTime] = useState(0);
    const [songTime, setSongTime] = useState(0);
+
    // Volume based variables
    const volumeLevel = useRef(1);
+
    // Components variables
    const [isCoverOpen, setCoverOpen] = useState(false);
    const [isVolumeTrigger, setVolumeTriggerOpen] = useState(false);
    const [isToolBoxOpen, setIsToolBoxOpen] = useState(false);
    const [copiedInfo, setCopiedInfo] = useState(false);
+
    function secondsToMinutes(seconds) {
       return `${Math.floor(seconds / 60)}:${(Math.round(seconds % 60) < 10 ? '0' : '')}${Math.round(seconds % 60)}`;
    }
+
    // Update time values on display
    useEffect(() => {
       audioRef.current = new Audio(require(`../music/${currentSong.audio}`));
@@ -39,17 +45,20 @@ export default function Player() {
          }
       };
    }, [currentSong]);
+
    useEffect(() => {
       const interval = setInterval(() => {
          setSongTime(audioRef.current.currentTime);
       }, 1000);
       return () => clearInterval(interval);
    }, []);
+
    useEffect(() => {
       audioRef.current.currentTime = currentTime;
       isPlaying.current ? audioRef.current.play()
          .then(() => { }).catch((error) => console.error(error)) : audioRef.current.pause();
    }, [currentTime]);
+
    // Play/pause function
    const togglePlayer = () => {
       if (isPlaying.current) {
@@ -61,6 +70,7 @@ export default function Player() {
          isPlaying.current ? audioRef.current.play().then(() => { }).catch((error) => console.error(error)) : audioRef.current.pause();
       }
    };
+
    // Update song time
    const handleSongTimeChange = (event) => {
       const newTime = parseFloat(event.target.value);
@@ -69,6 +79,7 @@ export default function Player() {
          audioRef.current.currentTime = newTime;
       }
    };
+
    //component toggle functions
    const toggleToolBox = () => setIsToolBoxOpen(!(isToolBoxOpen));
    const toggleVolumeTrigger = () => setVolumeTriggerOpen(!(isVolumeTrigger));
@@ -76,6 +87,7 @@ export default function Player() {
 
    const resetPlayerState = useCallback(() => {
       togglePlayer();
+      setCurrentTime(0);
       setTimeout(() => { togglePlayer() }, 1000);
    }, []);
 
@@ -86,6 +98,7 @@ export default function Player() {
          setPlayMode(playMode + 1)
       }
    }
+
    //set volume by keys
    const setVolume = (newValue) => {
       newValue >= 1 ? newValue = 1 :
@@ -93,24 +106,23 @@ export default function Player() {
             volumeLevel.current = newValue;
       audioRef.current.volume = newValue;
    };
+
    const playRandomSong = useCallback(() => {
-      setCurrentTime(0);
       setCurrentSongIndex(Math.floor(Math.random() * songLibrary.length));
    }, []);
+
    // Change the song
    const changeSongManually = useCallback((index) => {
       if (index >= 0 && index < songLibrary.length) {
-         if (playMode === 2) {
-            playRandomSong(); resetPlayerState();
+         switch (playMode) {
+            case 0: setCurrentSongIndex(index); break; //regular
+            case 1: setCurrentTime(0); break;          //repeat
+            case 2: playRandomSong();                  //shuffle
          }
-         else if (playMode === 1) {
-            setCurrentTime(0); resetPlayerState();
-         }
-         else {
-            setCurrentSongIndex(index); resetPlayerState();
-         }
+         resetPlayerState();
       }
    }, [playRandomSong, playMode, resetPlayerState]);
+
    function copyCurrentSong() {
       if (!navigator.clipboard || !navigator.clipboard.writeText) {
          console.error('Clipboard API not supported on this device.');
@@ -126,12 +138,14 @@ export default function Player() {
             console.error('Error copying song object to clipboard', error);
          });
    }
+
    // Handle volume change
    const handleVolumeChange = (e) => {
       const newVolume = parseFloat(e.target.value);
       volumeLevel.current = newVolume;
       audioRef.current.volume = newVolume;
    };
+
    // Toggle full screen
    const toggleFullScreen = () => {
       if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
@@ -147,26 +161,20 @@ export default function Player() {
          exitFullScreen && exitFullScreen.call(document);
       }
    };
+
    // Component to view song cover in full size
    const FullSizeCover = () => (
       <div onClick={toggleFullscreenCover} className='fullSizeCover'>
          <img loading='lazy' src={currentSong.cover} alt='Song Cover' />
       </div>
    );
+
    useEffect(() => {
       if (songTime.toFixed(0) >= convertTime(currentSong.length)) {
-         switch (playMode) {
-            case (0): {
-               setCurrentSongIndex((currentSongIndex + 1) % songLibrary.length);
-               resetPlayerState();
-               setCurrentTime(0);
-            } break;
-            case (1): { setCurrentTime(0); } break;
-            case (2): { playRandomSong(); resetPlayerState(); setCurrentTime(0); } break;
-            default: return console.error('error while playing next song');
-         }
+         changeSongManually(currentSongIndex + 1);
       }
    }, [songTime, currentSong.length, currentSongIndex, playMode, playRandomSong, resetPlayerState]);
+
    // Volume Trigger component
    const VolumeTrigger = () => (
       <div onClick={toggleVolumeTrigger} className='volumeTrigger'>
@@ -183,6 +191,7 @@ export default function Player() {
          </div>
       </div>
    );
+
    //tools component
    const ToolBox = () => {
       return (
@@ -205,6 +214,20 @@ export default function Player() {
          </div>
       );
    }
+
+   function changeSong(index) {
+      if (index >= songLibrary.length || index <= 0) {
+         return;
+      } else {
+         switch (playMode) {
+            case 0:
+            case 1: setCurrentSongIndex(index); break;
+            case 2: playRandomSong(); break;
+         }
+         resetPlayerState();
+      }
+   }
+
    document.onkeydown = (e) => {
       if (e.keyCode === 32) { togglePlayer(); }
       switch (e.key) {
@@ -217,6 +240,7 @@ export default function Player() {
          default: return;
       }
    }
+
    useEffect(() => {
       // Check if the browser supports the Media Session API
       if ('mediaSession' in navigator) {
@@ -250,6 +274,7 @@ export default function Player() {
       showNotification();
       setCurrentSongIndex(currentSongIndex);
    }, [currentSong, currentSongIndex, showNotification]);
+
    return (
       <React.Fragment>
          <Message message={playMode === 0 ? 'normal' : playMode === 1 ? 'repeat' : 'shuffle'} />
@@ -292,13 +317,13 @@ export default function Player() {
                   </div>
                   <div className='controlLayout'>
                      <button>
-                        <Icon icon='first_page' onClick={() => changeSongManually(currentSongIndex - 1)} />
+                        <Icon icon='first_page' onClick={() => changeSong(currentSongIndex - 1)} />
                      </button>
                      <button>
                         <Icon onClick={togglePlayer} icon={isPlaying.current ? 'pause' : 'play_arrow'} />
                      </button>
                      <button>
-                        <Icon icon='last_page' onClick={() => changeSongManually(currentSongIndex + 1)} />
+                        <Icon icon='last_page' onClick={() => changeSong(currentSongIndex + 1)} />
                      </button>
                   </div>
                </section>

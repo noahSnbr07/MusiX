@@ -25,6 +25,12 @@
         max-width: 800px;
     }
 
+    @media only screen and (min-width: 992px) {
+        & a {
+            width: 20%;
+        }
+    }
+
     & header {
         width: 100%;
         margin: 0;

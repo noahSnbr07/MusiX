@@ -1102,5 +1102,37 @@
       "cover": "https://i.scdn.co/image/ab67616d00001e02850a51b1da7dd2975ce16e1c",
       "length": "2:57",
       "audio": "kapitaenzursee.mp3"
+   },
+   {
+      "id": 137,
+      "title": "Kampf und Sturm",
+      "artist": "Kanonenfieber",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02803bdaeb6887d7533d593462",
+      "length": "4:05",
+      "audio": "kampfundsturm.mp3"
+   },
+   {
+      "id": 138,
+      "title": "Der Füsilier I",
+      "artist": "Kanonenfieber",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025003c5f7350600309d09a0c1",
+      "length": "6:16",
+      "audio": "derfuesilieri.mp3"
+   },
+   {
+      "id": 139,
+      "title": "Die Havarie",
+      "artist": "Kanonenfieber",
+      "cover": "https://i.scdn.co/image/ab67616d00001e025003c5f7350600309d09a0c1",
+      "length": "5:31",
+      "audio": "diehavarie.mp3"
+   },
+   {
+      "id": 140,
+      "title": "Die Schlacht bei Tannenberg",
+      "artist": "Kanonenfieber",
+      "cover": "https://i.scdn.co/image/ab67616d00001e02210dfadf9573fc5bab4177cd",
+      "length": "7:56",
+      "audio": "dieschlachtbeitannenberg.mp3"
    }
 ]
